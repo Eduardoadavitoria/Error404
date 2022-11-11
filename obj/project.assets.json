@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/runner/2022-2-AED-I-Projeto-1/main.csproj",
+      "projectUniqueName": "/home/runner/2022-2-AED-I-Projeto-2-aed1-2022-2-12/main.csproj",
       "projectName": "main",
-      "projectPath": "/home/runner/2022-2-AED-I-Projeto-1/main.csproj",
+      "projectPath": "/home/runner/2022-2-AED-I-Projeto-2-aed1-2022-2-12/main.csproj",
       "packagesPath": "/home/runner/.nuget/packages/",
-      "outputPath": "/home/runner/2022-2-AED-I-Projeto-1/obj/",
+      "outputPath": "/home/runner/2022-2-AED-I-Projeto-2-aed1-2022-2-12/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/runner/.nuget/NuGet/NuGet.Config"
