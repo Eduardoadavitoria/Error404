@@ -38,7 +38,7 @@ class Passageiro{
     }
     else{ Console.WriteLine("Você não poderá viajar sem a companhia de um adulto");
         }
-    if(celular.Length == 9){
+    if(celular.Length == 11){
       this.celular = celular;
     }
     else{

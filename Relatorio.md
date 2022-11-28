@@ -1,9 +1,15 @@
-https://gist.github.com/cuonggt/9b7d08a597b167299f0d
 ## ✈️ AVIAÇÃO ERROR 404 ##
-A aviação Error 404 está querendo registrar seus passageiros e criar uma tabela com seus nomes completos e CPF para consulta e controle de voo.
-Com isso a Aviação Error 404 contratou uma equipe para desenvolver esse sistema com as seguintes funcionalidades:
+**MINI RELATÓRIO**
 
-- [ ] Registrar dados dos passageiros;
-- [ ] Imprimir valor total de passagens do voo;
-- [ ] Fiscalização de passageiros menores de idade;
-- [ ] Tabela relatório do processo do voo.
+**14/11**
+
+Foi iniciado e quase finalizado o arquivo Passageiro.cs e nele serão armazenadas todas as informações solicitadas aos passageiros como nome, idade, CPF, e-mail e celular, solicitando para o usuário inserir um número de celular e CPF válidos caso faltem dígitos ou sobrem, aparecerá um aviso caso o usuário tenha menos de 18 anos, o informando que não poderá viajar sem a companhia de um adulto.
+
+Também foi iniciado o arquivo "Gerenciamento de aviao.cs" com a parte do menu com, atualmente, 2 opcções: sair do programa e adicionar um novo passageiro.
+
+**21/11**
+
+Foi implementado parte da classe GerenciamentoAvião, modificamos a classe Aviao, faltando apenas incrementar a tabela html e gravar os dados em um arquivo txt.
+Modificamos o arquivo de código GerenciamentoAviao.cs inserindo mais opções no menu e desenvolvemos os comandos que serão feitos a partir do menu. E finalizamos o arquivo de código Passageiro.cs
+
+**28/11**
