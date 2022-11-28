@@ -56,14 +56,16 @@ class Aviao{
     Console.WriteLine("=====================================================");
     for(int i = 0; i < Persona.Count; i++){
       Passageiro p = Persona[i];
-      Console.WriteLine($"Pessoa {i + 1}: {p.getNome()}");
+      Console.WriteLine($"Passageiro {i + 1}: {p.getNome()}");
       
     }
     Console.WriteLine("=====================================================");
 
     float vlr_total = Persona.Count * ValorDaPassagem;
     Console.WriteLine("Valor da Passagem: R${0:#.00}, Total: R${1:#.00}",this.ValorDaPassagem, vlr_total);
-    Console.WriteLine("=====================================================");    
+    Console.WriteLine("=====================================================");
+
+    
   }
 
   //HTML PART

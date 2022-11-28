@@ -2,43 +2,43 @@ using System;
 
 class Passageiro{
   private string nome;
-  private int cpf;
+  private string cpf;
   private string email;
   private string celular;
   private int idade;
 
   public Passageiro(){
     nome = "<Nome não Informado>";
-    cpf = 0;
+    cpf = "<CPF não informado>";
     email = "<e-mail não informado>";
     celular = "<Celular não informado>";
     idade = 0;
   }
 
-  public Passageiro(string nome, string email, string celular){
+  public Passageiro(string nome,string cpf, string email, string celular){
     this.nome = nome;
-    cpf = 0;
+    this.cpf = cpf;
     this.email = email;
     this.celular = celular;
     idade = 0;
   }
 
-  public Passageiro(string nome, int cpf, int idade, string celular, string email){
+  public Passageiro(string nome, string cpf, int idade, string celular, string email){
     this.nome = nome.ToUpper();
     this.email = email.ToUpper();
 
-    if(cpf>= 0 || cpf < 7){
+    if(cpf.Length == 11){
       this.cpf = cpf;
     }else{
       Console.WriteLine("Por favor inserir um número de CPF válido.");
-      this.cpf = 0;
+      this.cpf = "";
     }
     if(idade >= 18){
       this.idade = idade;
     }
     else{ Console.WriteLine("Você não poderá viajar sem a companhia de um adulto");
         }
-    if(celular.Length == 11){
+    if(celular.Length <= 12){
       this.celular = celular;
     }
     else{
@@ -55,12 +55,12 @@ class Passageiro{
     nome = n.ToUpper();
   }
 
-  public int getCPF(){
+  public string getCPF(){
     return cpf;
   }
 
-  public void setCPF(int c){
-    if(c >= 0 || c < 7){
+  public void setCPF(string c){
+    if(c.Length == 11){
       this.cpf = c;
     }else{
       Console.WriteLine("Por favor inserir um número de CPF válido.");
@@ -84,7 +84,7 @@ class Passageiro{
   }
 
   public void setCelular(string s){
-    if(celular.Length == 9){
+    if(s.Length <= 12){
       this.celular = s;
     }
     else{

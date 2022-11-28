@@ -13,3 +13,4 @@ Foi implementado parte da classe GerenciamentoAvião, modificamos a classe Aviao
 Modificamos o arquivo de código GerenciamentoAviao.cs inserindo mais opções no menu e desenvolvemos os comandos que serão feitos a partir do menu. E finalizamos o arquivo de código Passageiro.cs
 
 **28/11**
+Foi implentado a função de gravar dados, o arquivo é inserido na pasta banco de dados em um arquivo txt. Concluímos a opção de inserir o passageiro no sistema. Iniciamos a parte para geração de arquivo html. Estamos na etapa final do nosso projeto, ficando pendente acertar alguns erros e finalizar o html.
