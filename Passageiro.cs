@@ -36,13 +36,13 @@ class Passageiro{
     if(idade >= 18){
       this.idade = idade;
     }
-    else{ Console.WriteLine("Você não poderá viajar sem a companhia de um adulto");
+    else{ Console.WriteLine("Você não poderá viajar sem a companhia de um adulto.");
         }
     if(celular.Length <= 12){
       this.celular = celular;
     }
     else{
-      Console.WriteLine("Por favor inserir um número de celular válido");
+      Console.WriteLine("Por favor inserir um número de celular válido.");
     }
     
   }
@@ -75,7 +75,7 @@ class Passageiro{
     if(idade >= 18){
       this.idade = i;
     }
-    else{ Console.WriteLine("Você não poderá viajar sem a companhia de um adulto");
+    else{ Console.WriteLine("Você não poderá viajar sem a companhia de um adulto.");
         }
   }
   
@@ -88,7 +88,7 @@ class Passageiro{
       this.celular = s;
     }
     else{
-      Console.WriteLine("Por favor inserir um número de celular válido");
+      Console.WriteLine("Por favor inserir um número de celular válido.");
     }
   }
   

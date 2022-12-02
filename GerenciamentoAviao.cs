@@ -18,7 +18,7 @@ class Gerenciamento
             int idade = int.Parse(dados[2]);
             string celular = dados[3];
             string email = dados[4];
-            
+
             meu_aviao.EmbarquePassageiro(new Passageiro(nome, cpf, idade, celular, email));
         }
         return true;
@@ -71,13 +71,13 @@ class Gerenciamento
                 case "1":
                     Console.WriteLine("Informe o nome do passageiro:");
                     string nome = Console.ReadLine();
-                    Console.WriteLine("Informe o cpf do passageiro. Obs. Sem pontos e traço!");
+                    Console.WriteLine("Informe o CPF do passageiro (somente números).");
                     string cpf = Console.ReadLine();
-                    Console.WriteLine("Informe a idade do passageiro");
+                    Console.WriteLine("Informe a idade do passageiro.");
                     int idade = int.Parse(Console.ReadLine());
-                    Console.WriteLine("Informe o número do celular - Com DDD e sem parentêse");
+                    Console.WriteLine("Informe o número do celular e o DDD (sem parentêse)");
                     string celular = Console.ReadLine();
-                    Console.WriteLine("Informe o email");
+                    Console.WriteLine("Informe o email para contato.");
                     string email = Console.ReadLine();
                     meu_aviao.EmbarquePassageiro(new Passageiro(nome, cpf, idade, celular, email));
                     Console.WriteLine("\nPassageiro Embarcado! Pressione qualquer tecla para continuar.");
@@ -87,7 +87,11 @@ class Gerenciamento
                     meu_aviao.ImprimeRelatorioPassageiros();
                     Console.WriteLine("\nRelatório Apresentado! Deseja salvar em HTML? (S/N).");
                     string resp_html = Console.ReadLine();
-                    //RELATORIO HTML
+                    if (resp_html.ToUpper() == "S")
+                    {
+                        meu_aviao.ImprimeRelatorioHTML("relatorios/modelo_relatorio.html");
+                        Console.ReadKey();
+                    }
                     break;
                 case "3":
                     bool realizar_acao = true;
@@ -95,44 +99,45 @@ class Gerenciamento
                     {
                         Console.WriteLine("Os dados atuais serão substituídos, deseja continuar? (S/N)");
                         string resp = Console.ReadLine();
-                        if(resp.ToUpper() =="S")
+                        if (resp.ToUpper() == "S")
                         {
-                          meu_aviao.DesembarquePassageiros();
-                          realizar_acao = true;
+                            meu_aviao.DesembarquePassageiros();
+                            realizar_acao = true;
                         }
-                      else{
-                          realizar_acao = false;
-                      }
+                        else
+                        {
+                            realizar_acao = false;
+                        }
                     }
-                if(realizar_acao)
-                {
-                  CarregarDadosPassageiros("banco_de_dados/dados.txt");
-                  Console.WriteLine("\nDados carregados com sucesso!");
-                }
-                else
-                {
-                  Console.WriteLine("\nDados Não Carregados! Pressione alguma tecla para continuar");
-                }
-                Console.ReadKey();
-                break;
-              case "4":
-                GravarDadosPassageiros("banco_de_dados/dados.txt");
-                Console.WriteLine("\nDados gravados com sucesso!");
-                Console.ReadKey();
-                break;
-              default:
-                Console.WriteLine("Opcão Inválida! Pressione qualquer tecla para continuar.");
-                Console.ReadKey();
-                break;
+                    if (realizar_acao)
+                    {
+                        CarregarDadosPassageiros("banco_de_dados/dados.txt");
+                        Console.WriteLine("\nDados carregados com sucesso!");
+                    }
+                    else
+                    {
+                        Console.WriteLine("\nDados NÃO Carregados! Pressione alguma tecla para continuar");
+                    }
+                    Console.ReadKey();
+                    break;
+                case "4":
+                    GravarDadosPassageiros("banco_de_dados/dados.txt");
+                    Console.WriteLine("\nDados gravados com sucesso!");
+                    Console.ReadKey();
+                    break;
+                default:
+                    Console.WriteLine("Opcão Inválida! Pressione qualquer tecla para continuar.");
+                    Console.ReadKey();
+                    break;
             }
-          opcao="";
+            opcao = "";
         }
     }
-  public static void Main(string[] args)
-  {
-    Gerenciamento meu_gerenciador = new Gerenciamento();
-    meu_gerenciador.MenuInicial();
-  }
+    public static void Main(string[] args)
+    {
+        Gerenciamento meu_gerenciador = new Gerenciamento();
+        meu_gerenciador.MenuInicial();
+    }
 
 }
 
