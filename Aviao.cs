@@ -91,9 +91,9 @@ class Aviao
         {
             Passageiro p = Persona[i];
             string linha_aux = linha_tabela.Replace("{{nome_passageiro}}", p.getNome());
-            linha_aux = linha_aux.Replace("{{cpf_passageiro}}", p.getCPF().ToString());
-            linha_aux = linha_aux.Replace("{{celular_passageiro}}", p.getCelular().ToString());
-            linha_aux = linha_aux.Replace("{{email_passageiro}}", p.getEmail().ToString());
+            linha_aux = linha_aux.Replace("{{cpf_passageiro}}", p.getCPF());
+            linha_aux = linha_aux.Replace("{{celular_passageiro}}", p.getCelular());
+            linha_aux = linha_aux.Replace("{{email_passageiro}}", p.getEmail());
 
             linhas_preenchidas += linha_aux + Environment.NewLine;
         }
@@ -103,7 +103,7 @@ class Aviao
         float vlr_total = Persona.Count * ValorDaPassagem;
         texto_arquivo = texto_arquivo.Replace("{{receita_total}}", vlr_total.ToString());
 
-        string nome_relatorio = "relatorio/Relatorio_Passageiros.html";
+        string nome_relatorio = "relatorios/Relatorio_Passageiros.html";
         File.WriteAllText(nome_relatorio, texto_arquivo);
     }
 }
